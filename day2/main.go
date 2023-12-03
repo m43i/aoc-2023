@@ -142,26 +142,20 @@ func parseGame(value *string) Game {
         rounds = append(rounds, parseRound(&round, i+1))
     }
 
-    red := -1
-    blue := -1
-    green := -1
+    red := 0
+    blue := 0
+    green := 0
 
     for _, round := range rounds {
-        if red == -1 {
-            red = round.Red
-        } else if red < round.Red {
+        if red < round.Red {
             red = round.Red
         }
 
-        if blue == -1 {
-            blue = round.Blue
-        } else if blue < round.Blue {
+        if blue < round.Blue {
             blue = round.Blue
         }
 
-        if green == -1 {
-            green = round.Green
-        } else if green < round.Green {
+        if green < round.Green {
             green = round.Green
         }
     }
