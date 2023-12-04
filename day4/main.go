@@ -54,8 +54,8 @@ func main() {
 		}
 	}
 
-    fmt.Println("Part 1: ", sum)
-    fmt.Println("Part 2: ", p2Sum)
+	fmt.Println("Part 1: ", sum)
+	fmt.Println("Part 2: ", p2Sum)
 }
 
 func parseCard(line *string) *Card {
